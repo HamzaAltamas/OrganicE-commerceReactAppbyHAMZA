@@ -1,0 +1,234 @@
+:root {
+  --orange:#F47606;
+  --greeen:#477018;
+  --black:#676767;
+  --dark_black:#282828;
+}
+
+body .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: none !important;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+body .card h2 {
+  margin-bottom: 40px;
+}
+
+body .card .current-value {
+  width: 100%;
+}
+
+body .card .current-value label {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 30%;
+  font-size: 15px;
+  color: var(--dark_black);
+  font-weight: bold;
+}
+
+body .card .current-value input {
+  margin: 0;
+  width: 50%;
+  margin-bottom: 5px;
+  font-size: 16px;
+  color: var(--black);
+  padding-left: 15px;
+  border: none;
+  border-radius: 20px;
+}
+
+body .card .values {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-weight: 600;
+  margin-bottom: 10px;
+  width: 100%;
+  color: var(--black);
+}
+
+body .card #slider {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  height: 5px;
+  background: var(--greeen);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+body .card #slider #min {
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  width: 0;
+  height: 5px;
+  border-radius: 5px;
+  background: var(--greeen);
+}
+
+body .card #slider #min:hover::before {
+  opacity: 1;
+}
+
+body .card #slider #min:hover::after {
+  opacity: 1;
+}
+
+body .card #slider #min::before {
+  opacity: 0;
+  content: attr(data-content);
+  display: block;
+  position: absolute;
+  top: -40px;
+  right: -23px;
+  width: 40px;
+  padding: 3px;
+  text-align: center;
+  color: white;
+  background: #274684;
+  border-radius: 20px;
+}
+
+body .card #slider #min::after {
+  opacity: 0;
+  content: '';
+  display: block;
+  position: absolute;
+  top: -18px;
+  right: -8px;
+  border-top: 8px solid #274684;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+}
+
+body .card #slider #min #min-drag {
+  position: absolute;
+  right: -7.5px;
+  top: -5px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: var(--greeen);
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+body .card #slider #min #min-drag:hover {
+  -webkit-box-shadow: 0 0 0 6px rgba(39, 70, 132, 0.2);
+          box-shadow: 0 0 0 6px rgba(39, 70, 132, 0.2);
+}
+
+body .card #slider #max {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  width: 0;
+  height: 5px;
+  border-radius: 5px;
+  background: --greeen;
+}
+
+body .card #slider #max:hover::before {
+  opacity: 1;
+}
+
+body .card #slider #max:hover::after {
+  opacity: 1;
+}
+
+body .card #slider #max::before {
+  opacity: 0;
+  content: attr(data-content);
+  display: block;
+  position: absolute;
+  top: -40px;
+  right: -23px;
+  width: 40px;
+  padding: 3px;
+  text-align: center;
+  color: white;
+  background: #274684;
+  border-radius: 20px;
+}
+
+body .card #slider #max::after {
+  opacity: 0;
+  content: '';
+  display: block;
+  position: absolute;
+  top: -18px;
+  right: -8px;
+  border-top: 8px solid #274684;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+}
+
+body .card #slider #max #max-drag {
+  position: absolute;
+  right: -7.5px;
+  top: -5px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: var(--greeen);
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+body .card #slider #max #max-drag:hover {
+  -webkit-box-shadow: 0 0 0 6px rgba(39, 70, 132, 0.2);
+          box-shadow: 0 0 0 6px rgba(39, 70, 132, 0.2);
+}
+
+.fa-instagram {
+  position: absolute;
+  color: var(--greeen);
+  top: 3%;
+  right: 2%;
+  font-size: 38px;
+}
+
+.fa-instagram:hover {
+  font-size: 42px;
+  color: #274684;
+  -webkit-transition: all .1s linear;
+  transition: all .1s linear;
+  cursor: pointer;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+*:focus {
+  outline: none;
+  -webkit-box-shadow: 0 0 0 2px var(--greeen);
+          box-shadow: 0 0 0 2px var(--greeen);
+}
+/*# sourceMappingURL=style.css.map */
